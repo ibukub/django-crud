@@ -36,10 +36,10 @@ class PostUpdateView(UpdateView):
 
 success_url  =  reverse_lazy('blog:all') 
 
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import DeleteView
 from .models import Post
 
-class PostDeleteView(UpdateView): 
+class PostDeleteView(DeleteView): 
     model = Post
     fields = '__all__'
 
